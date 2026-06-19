@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+ <link rel="icon" type="image/png" href="/assets/ziane school logo.jpg"> 
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <title>Ziane School – École Privée de Soutien Scolaire</title>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<!-- ═══════════════════════════════════
+     NAVBAR
+═══════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a class="logo" href="#">
+      <img src="/assets/ziane_school_bar.png" alt="Ziane School" class="logo-img"/>
+    </a>
+
+    <!-- Nav links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-key="0">À propos</a></li>
+      <li><a href="#matieres" data-key="1">Matières</a></li>
+      <li><a href="#galerie" data-key="2">Galerie</a></li>
+      <li><a href="#inscription" data-key="3" class="nav-cta">S'inscrire</a></li>
+    </ul>
+
+    <!-- Language toggle -->
+    <div class="lang-toggle desktop-lang">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
+
+    <!-- Mobile elements -->
+    <div class="mobile-group">
+      <a href="#inscription" class="mobile-cta">S'inscrire</a>
+      <div class="lang-toggle mobile-lang">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section class="hero" id="home" data-aos="fade-up">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge" id="hero-badge-text">
+      <span class="dot"></span>🎓 Ouvert aux inscriptions 2026-2027
+    </div>
+
+    <h1 id="hero-title">L'excellence<br/>scolaire<br/>commence <em>ici.</em></h1>
+
+    <p class="hero-sub" id="hero-sub">
+      Ziane School, votre école privée de soutien scolaire à Aïn Benian.
+      Sciences naturelles, Mathématiques, Physique — encadrés par des professeurs expérimentés.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#inscription" class="btn-primary" id="hero-btn-main">Inscrivez-vous maintenant</a>
+      <a href="#about"       class="btn-outline"  id="hero-btn-sec">Découvrir l'école</a>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num" id="stat1-num">+<span>500</span></div>
+        <div class="stat-label" id="stat1-label">Élèves formés</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" id="stat2-num"><span>3</span></div>
+        <div class="stat-label" id="stat2-label">Matières clés</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" id="stat3-num">+<span>10</span></div>
+        <div class="stat-label" id="stat3-label">Ans d'expérience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" data-aos="fade-right">
+  
+  <div class="about-container" data-aos="fade-right">
+    <div class="about-head">
+      <div class="section-eyebrow" id="about-eye">Qui sommes-nous</div>
+      <h2 class="section-title" id="about-title">Une école pensée pour la réussite de vos enfants</h2>
+      <p class="section-sub" id="about-sub">
+        Fondée à Aïn Benian, Ziane School accompagne les élèves du cycle moyen et secondaire 
+        avec un encadrement pédagogique rigoureux et bienveillant.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-vids">
+        <div class="about-vid">
+          <video src="/videos/من هو الأستاذ زيان أسامة؟.mp4" controls>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <ul class="feature-list">
+          <li>
+            <div class="feat-icon">
+              <img src="/assets/Gemini_Generated_Image_17qwzv17qwzv17qw.png" alt="Groupes réduits">
+            </div>
+            <span>Cours de soutien en groupes réduits pour un suivi personnalisé de chaque élève</span>
+          </li>
+          <li>
+            <div class="feat-icon">
+              <img src="assets/Gemini_Generated_Image_j7pw51j7pw51j7pw.png" alt="Professeurs certifiés">
+            </div>
+            <span>Professeurs certifiés et expérimentés dans leur domaine disciplinaire</span>
+          </li>
+          <li>
+            <div class="feat-icon">
+              <img src="/assets/Gemini_Generated_Image_p2no34p2no34p2no.png" alt="Locaux modernes">
+            </div>
+            <span>Locaux modernes, climatisés et équipés, dans un cadre discipliné et respectueux</span>
+          </li>
+          <li>
+            <div class="feat-icon emoji-icon">🎯
+                            <img src="/assets/classroom-management-leave-work-at-school.jpg" alt="Locaux modernes">
+
+            </div>
+            <span>Préparation aux examens du BEM et du Bac Algérien avec exercices ciblés</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="subjects" id="matieres" data-aos="fade-left">
+  <div class="subjects-head">
+    <div class="section-eyebrow" id="subj-eye">Nos matières</div>
+    <h2 class="section-title" id="subj-title">Trois disciplines fondamentales</h2>
+    <p class="section-sub" id="subj-sub">
+      Des cours structurés et progressifs pour renforcer les bases et exceller aux examens.
+    </p>
+  </div>
+
+  <div class="subjects-grid">
+    <!-- Sciences Naturelles -->
+    <div class="subject-card" style="background-image: url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600&h=400&fit=crop');">
+      <div class="subject-overlay"></div>
+      <div class="subject-content">
+        <div class="subject-icon">
+          <i class="fa-solid fa-dna"></i>
+        </div>
+        <h3 id="sci-name">Sciences Naturelles</h3>
+        <p id="sci-desc">
+          Biologie, géologie, écologie — cours complets avec schémas détaillés
+          et exercices pratiques adaptés au programme algérien.
+        </p>
+        <span class="subj-ar" dir="rtl">علوم طبيعية</span>
+      </div>
+    </div>
+
+    <!-- Mathématiques -->
+    <div class="subject-card" style="background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&h=400&fit=crop');">
+      <div class="subject-overlay"></div>
+      <div class="subject-content">
+        <div class="subject-icon">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+        <h3 id="math-name">Mathématiques</h3>
+        <p id="math-desc">
+          Algèbre, analyse, géométrie et statistiques — méthodes de résolution
+          et entraînements intensifs pour les examens.
+        </p>
+        <span class="subj-ar" dir="rtl">رياضيات</span>
+      </div>
+    </div>
+
+    <!-- Physique -->
+    <div class="subject-card" style="background-image: url('https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=600&h=400&fit=crop');">
+      <div class="subject-overlay"></div>
+      <div class="subject-content">
+        <div class="subject-icon">
+          <i class="fa-solid fa-flask-vial"></i>
+        </div>
+        <h3 id="phy-name">Physique</h3>
+        <p id="phy-desc">
+          Mécanique, électricité, optique et thermodynamique — théorie claire
+          et exercices de type bac pour une maîtrise complète.
+        </p>
+        <span class="subj-ar" dir="rtl">فيزياء</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="galerie" data-aos="fade-up">
+  <div class="gallery-inner">
+    <div class="section-eyebrow" id="gal-eye">Notre école</div>
+    <h2 class="section-title" id="gal-title">Un cadre d'apprentissage inspirant</h2>
+    <p class="section-sub" id="gal-sub">
+      Des espaces conçus pour favoriser la concentration et le progrès.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+    <!-- Map - Large -->
+    <div class="gal-item wide tall map-container">
+      <div class="map-wrapper">
+        <iframe 
+          src="https://maps.google.com/maps?q=Ziane%20school,%20Rue%20du%20po%C3%A8te%20taghor,%20Sidi%20M'Hamed,%20Algiers&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          class="map-iframe"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        
+        <!-- Map Overlay Label -->
+        <div class="map-overlay">
+          <div class="map-label">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>📍 Ziane School - Sidi M'Hamed</span>
+          </div>
+        </div>
+        
+        <!-- Info Card -->
+        <div class="map-info-card">
+          <div class="map-info-header">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>📍 Ziane School</h4>
+          </div>
+          <div class="map-info-body">
+            <p>
+              <i class="fa-solid fa-road"></i> Rue du poète Taghor<br>
+              <i class="fa-solid fa-city"></i> Sidi M'Hamed 16000, Algiers
+            </p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Ziane+school,+Rue+du+po%C3%A8te+taghor,+Sidi+M'Hamed,+Algiers" 
+               target="_blank" 
+               class="map-directions-btn">
+              <i class="fa-solid fa-directions"></i> Itinéraire
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="gal-item video-item">
+      <video 
+        src="/videos/نسعى لأن نصل بكم الى بر الأمان 🎯 - الجي سونطر 🔒.mp4" 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="gallery-video"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div class="gal-overlay">
+        <i class="fa-solid fa-play"></i>
+        <span>Vidéo de présentation</span>
+      </div>
+    </div>
+
+    <!-- Image 1 -->
+    <div class="gal-item image-item">
+      <img src="assets/ziane-school-class2.jpg" alt="Salle de classe Ziane School"/>
+      <div class="gal-overlay">
+        <span>📚 Salle de classe</span>
+      </div>
+    </div>
+
+    <!-- Image 2 -->
+    <div class="gal-item image-item">
+      <img src="assets/Screenshot_2026-06-19-16-21-34-419_com.google.android.apps.maps-edit.jpg" alt="Travail en groupe"/>
+      <div class="gal-overlay">
+        <span>👥 Travail en groupe</span>
+      </div>
+    </div>
+
+    <!-- Image 3 -->
+    <div class="gal-item image-item">
+      <img src="assets/ziane-school-classs.jpg" alt="Étudiants en classe"/>
+      <div class="gal-overlay">
+        <span>🎓 Étudiants</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════
+     REGISTRATION
+═══════════════════════════════════ -->
+<section class="register" id="inscription" ata-aos="fade-up">
+  <div class="section-eyebrow" id="reg-eye">Inscription 2026–2027</div>
+  <h2 class="section-title" id="reg-title">Remplissez le formulaire d'inscription</h2>
+  <p class="section-sub" id="reg-sub">
+    Complétez le formulaire ci-dessous, puis générez votre استمارة تسجيل officielle.
+    Vous pourrez l'imprimer ou la télécharger en PDF.
+  </p>
+
+  <div class="reg-wrapper">
+
+    <!-- FORM CARD -->
+    <div class="form-card">
+      <h3 id="form-title">Formulaire d'inscription</h3>
+      <p id="form-sub">Tous les champs sont requis / جميع الحقول مطلوبة</p>
+
+      <!-- Name row -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            <span id="lbl-first">Prénom*</span>
+            <span class="lbl-ar" id="lbl-first-ar">الاسم</span>
+          </label>
+          <input type="text" id="f-prenom" placeholder="ex: Yacine"/>
+        </div>
+        <div class="form-group">
+          <label>
+            <span id="lbl-last">Nom*</span>
+            <span class="lbl-ar" id="lbl-last-ar">اللقب</span>
+          </label>
+          <input type="text" id="f-nom" placeholder="ex: Ziani"/>
+        </div>
+      </div>
+
+      <!-- Date of birth -->
+      <div class="form-group">
+        <label>
+          <span id="lbl-dob">Date de naissance*</span>
+          <span class="lbl-ar" id="lbl-dob-ar">تاريخ الميلاد</span>
+        </label>
+        <input type="date" id="f-dob"/>
+      </div>
+
+      <!-- Phone row -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            <span id="lbl-tel">Téléphone élève*</span>
+            <span class="lbl-ar" id="lbl-tel-ar">رقم الهاتف</span>
+          </label>
+          <input type="tel" id="f-tel" placeholder="05 XX XX XX XX"/>
+        </div>
+        <div class="form-group">
+          <label>
+            <span id="lbl-telp">Téléphone parent*</span>
+            <span class="lbl-ar" id="lbl-telp-ar">رقم هاتف الولي</span>
+          </label>
+          <input type="tel" id="f-tel-parent" placeholder="06 XX XX XX XX"/>
+        </div>
+      </div>
+
+      <!-- Level -->
+      <div class="form-group">
+        <label>
+          <span id="lbl-level">Niveau scolaire*</span>
+          <span class="lbl-ar" id="lbl-level-ar">المستوى الدراسي</span>
+        </label>
+        <select id="f-niveau">
+          <option value="">-- Sélectionner le niveau --</option>
+          <option value="0">3ème Année Moyenne / السنة الثالثة متوسط</option>
+          <option value="1">4ème Année Moyenne / السنة الرابعة متوسط</option>
+          <option value="2">1ère Année Secondaire / السنة الأولى ثانوي</option>
+          <option value="3">2ème Année Secondaire / السنة الثانية ثانوي</option>
+          <option value="4">3ème Année Secondaire / السنة الثالثة ثانوي</option>
+        </select>
+      </div>
+
+      <!-- Subjects --> 
+      <div class="form-group">
+        <label>
+          <span id="lbl-subjects">Matières choisies*</span>
+          <span class="lbl-ar" id="lbl-subjects-ar">المواد</span>
+        </label>
+        <div class="subjects-check">
+          <label class="check-item">
+            <input type="checkbox" id="ch-sci"/>
+            <span>
+              <span id="lbl-sci">Sciences Naturelles</span>
+              <span class="check-ar" id="lbl-sci-ar">علوم طبيعية</span>
+            </span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="ch-math"/>
+            <span>
+              <span id="lbl-math">Mathématiques</span>
+              <span class="check-ar" id="lbl-math-ar">رياضيات</span>
+            </span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="ch-phy"/>
+            <span>
+              <span id="lbl-phy">Physique</span>
+              <span class="check-ar" id="lbl-phy-ar">فيزياء</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button class="btn-generate" id="btn-generate" onclick="generateIstimara()">
+        📄 Générer &amp; Prévisualiser l'Istimara / إنشاء الاستمارة
+      </button>
+    </div>
+
+    <!-- PREVIEW PANEL -->
+    <div class="preview-panel">
+
+      <!-- Empty state -->
+      <div class="preview-empty" id="preview-empty">
+        <div class="ei">📋</div>
+        <p id="preview-empty-text">
+          Remplissez le formulaire et cliquez sur<br/>
+          <strong>"Générer l'Istimara"</strong><br/>
+          pour voir la prévisualisation.
+        </p>
+      </div>
+
+      <!-- Generated Istimara -->
+      <div id="istimara-preview">
+        <div id="istimara-doc"></div>
+        <div class="preview-actions">
+          <button class="btn-print" id="btn-print" onclick="printIstimara()">🖨️ Imprimer</button>
+<button class="btn-pdf" id="btn-pdf" onclick="downloadPDF()">
+  <i class="fa-solid fa-file-pdf"></i> ⬇️ Télécharger PDF
+</button>        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a class="logo" href="#">
+        <img src="/assets/ziane_school_bar.png" alt="Ziane School" class="logo-img logo-img--footer"/>
+      </a>
+      <div class="footer-divider"></div>
+      <p id="footer-desc">
+        École privée de soutien scolaire à Aïn Benian, Alger.
+        Nous accompagnons vos enfants vers l'excellence depuis plus de 10 ans.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4 id="footer-nav-title">Navigation</h4>
+      <ul>
+        <li><a href="#about"       class="footer-nav-link">À propos</a></li>
+        <li><a href="#matieres"    class="footer-nav-link">Nos matières</a></li>
+        <li><a href="#galerie"     class="footer-nav-link">Galerie</a></li>
+        <li><a href="#inscription" class="footer-nav-link">Inscription</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4 id="footer-contact-title">Contact</h4>
+      <ul>
+        <li>
+          <a href="https://www.google.com/maps/search/?api=1&query=Ziane+school,+Rue+du+poète+taghor,+Sidi+M'Hamed,+Algiers" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot"></i> Ziane school, Rue du poète taghor, Sidi M'Hamed 16000, Algiers, Algeria
+          </a>
+        </li>
+        
+        <li>
+          <i class="fa-solid fa-phone-volume"></i> 
+          <a href="tel:+213557377580">+213 557 377 580</a>  
+          <a href="tel:+213793738885">+213 793 738 885</a>
+        </li>
+        
+        <li>
+          <a href="https://www.facebook.com/share/1D9ULbAhVz/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i> @ziane-school.dz
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.instagram.com/ziane.school?igsh=MWZrdTBpbGh6YnVwdQ==" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i> @ziane.school
+          </a>
+        </li>
+        
+        <li>
+          <a href="mailto:zedschool37@gmail.com">
+            <i class="fa-regular fa-envelope"></i> zedschool37@gmail.com
+          </a>
+        </li>
+        
+        <li>
+          <i class="fa-regular fa-clock"></i> Sam–Jeu, 7h–18h
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span id="footer-copy">© 2025 Ziane School. Tous droits réservés.</span>
+    <span id="footer-loc">Rue du poète Taghor, Sidi M'Hamed 16000</span>
+    <!-- ADDED: Powered By Link -->
+    <span id="footer-dev">
+      Powered by <a href="https://boukaisanis.netlify.app/" target="_blank" rel="noopener noreferrer" class="dev-link">Boukais Mohamed anis</a>
+    </span>
+  </div>
+</footer>
+
+
+<script>
+  // Initialize AOS (Animate On Scroll)
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: false,
+      offset: 120,
+      delay: 0,
+     
+    });
+  });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
