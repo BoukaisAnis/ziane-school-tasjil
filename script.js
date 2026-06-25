@@ -423,6 +423,338 @@ function chk(checked) {
     : '<span class="ist-checkbox"></span>';
 }
 
+function getIstimaraDocumentCSS(root) {
+  return `
+    ${root},
+    ${root} * {
+      box-sizing: border-box;
+      letter-spacing: 0 !important;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ${root} {
+      --navy: #292983;
+      --orange: #ee6326;
+      --blue: #1c60b2;
+      --gold: #f3ae16;
+      --gray: #6b7280;
+      width: 794px;
+      min-height: 1123px;
+      margin: 0 auto;
+      padding: 42px 52px;
+      background: #fff;
+      color: #111;
+      font-family: "Cairo", "Amiri", "Tahoma", "Arial", sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+      direction: inherit;
+      text-align: inherit;
+      border: 0;
+      border-radius: 0;
+    }
+
+    ${root} .ist-header {
+      position: relative;
+      min-height: 96px;
+      margin-bottom: 16px;
+      padding: 0 86px 12px;
+      text-align: center;
+      border-bottom: 2.5px solid var(--navy);
+    }
+
+    ${root} .ist-logo-text,
+    ${root} .ist-logo-sub,
+    ${root} .ist-photo-box,
+    ${root} .ist-footer-note,
+    ${root} .ist-header [style*="Poppins"] {
+      font-family: "Poppins", "Arial", sans-serif;
+    }
+
+    ${root} .ist-logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    ${root} .ist-logo-text span {
+      color: var(--orange);
+    }
+
+    ${root} .ist-logo-sub {
+      max-width: 470px;
+      margin: 2px auto 0;
+      color: var(--gray);
+      font-size: 8px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    ${root} .ist-title {
+      margin: 4px 0 2px;
+      color: var(--navy);
+      font-family: "Cairo", "Amiri", "Tahoma", serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    ${root} .ist-photo-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      background: #f8f8f8;
+      border: 1.5px solid #999;
+      border-radius: 7px;
+      font-size: 8px;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    [dir="rtl"] ${root} .ist-photo-box {
+      right: 0;
+      left: auto;
+    }
+
+    ${root} .ist-section-title {
+      margin: 12px 0 7px;
+      padding: 6px 10px;
+      color: var(--navy);
+      background: #f8f9ff;
+      border-right: 3px solid var(--orange);
+      border-radius: 5px;
+      font-family: "Cairo", "Amiri", "Tahoma", serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: inherit;
+    }
+
+    [dir="rtl"] ${root} .ist-section-title {
+      border-right: 0;
+      border-left: 3px solid var(--orange);
+    }
+
+    ${root} .ist-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 14px;
+      margin-bottom: 6px;
+    }
+
+    ${root} .ist-field {
+      min-height: 24px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #bbb;
+    }
+
+    ${root} .ist-label {
+      margin-top: 2px;
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: 600;
+      text-align: inherit;
+    }
+
+    ${root} .ist-value {
+      display: block;
+      color: var(--blue);
+      font-family: "Cairo", "Amiri", "Tahoma", serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+
+    ${root} .ist-subj-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px 16px;
+      margin: 7px 0 12px;
+      padding: 9px 12px;
+      background: #f8f9ff;
+      border-radius: 7px;
+    }
+
+    [dir="rtl"] ${root} .ist-subj-row {
+      justify-content: flex-end;
+    }
+
+    ${root} .ist-subj-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #222;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      unicode-bidi: isolate;
+    }
+
+    ${root} .ist-checkbox {
+      width: 13px;
+      height: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 13px;
+      border: 1.5px solid #666;
+      border-radius: 3px;
+      font-size: 8px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    ${root} .ist-checkbox.checked {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    ${root} .ist-rules {
+      margin: 7px 0;
+      padding: 9px 12px;
+      background: #f8f9ff;
+      border-left: 3px solid var(--gold);
+      border-radius: 7px;
+    }
+
+    [dir="rtl"] ${root} .ist-rules {
+      border-right: 3px solid var(--gold);
+      border-left: 0;
+    }
+
+    ${root} .ist-rule {
+      margin-bottom: 3px;
+      color: #333;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.55;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+
+    ${root} .ist-agreement {
+      margin: 7px 0;
+      padding: 9px 11px;
+      color: #333;
+      background: #fafafa;
+      border: 1px solid #e9e9e9;
+      border-radius: 7px;
+      font-size: 11px;
+      line-height: 1.65;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+
+    ${root} .ist-sigs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    ${root} .ist-sig-box {
+      padding: 8px 10px;
+      text-align: center;
+      background: #fafafa;
+      border: 1.5px solid #ddd;
+      border-radius: 7px;
+    }
+
+    ${root} .ist-sig-label {
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-family: "Cairo", "Amiri", "Tahoma", serif;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    ${root} .ist-sig-line {
+      height: 22px;
+      margin-bottom: 4px;
+      border-bottom: 1.5px solid #bbb;
+    }
+
+    ${root} .ist-footer-note {
+      margin-top: 11px;
+      padding-top: 8px;
+      color: #999;
+      border-top: 1px dashed #d7d7d7;
+      font-size: 8px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      ${root} {
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+      }
+
+      ${root} .ist-info-grid,
+      ${root} .ist-sigs {
+        grid-template-columns: 1fr;
+      }
+
+      ${root} .ist-header {
+        padding-right: 76px;
+        padding-left: 76px;
+      }
+    }
+  `;
+}
+
+function waitForRenderReady(root) {
+  const fontReady = document.fonts?.ready || Promise.resolve();
+  const imageReady = Promise.all(
+    Array.from(root.querySelectorAll("img")).map((img) => {
+      if (img.complete) return Promise.resolve();
+      return new Promise((resolve) => {
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
+    })
+  );
+
+  return Promise.all([fontReady, imageReady]).then(
+    () => new Promise((resolve) => requestAnimationFrame(() => setTimeout(resolve, 80)))
+  );
+}
+
+async function renderIstimaraCanvas(sheet) {
+  const options = {
+    scale: Math.min(Math.max(window.devicePixelRatio || 2, 2), 3),
+    useCORS: true,
+    logging: false,
+    backgroundColor: "#ffffff",
+    width: sheet.offsetWidth,
+    height: sheet.scrollHeight,
+    windowWidth: sheet.offsetWidth,
+    windowHeight: sheet.scrollHeight,
+    scrollX: 0,
+    scrollY: 0,
+  };
+
+  try {
+    return await html2canvas(sheet, { ...options, foreignObjectRendering: true });
+  } catch (error) {
+    console.warn("Foreign-object PDF render failed, retrying canvas renderer:", error);
+    return html2canvas(sheet, { ...options, foreignObjectRendering: false });
+  }
+}
+
 /* ── GENERATE ISTIMARA ── */
 function generateIstimara() {
   const c = CONTENT[currentLang];
@@ -454,16 +786,16 @@ function generateIstimara() {
       </div>
       <div class="ist-logo-text">ZIANE <span>SCHOOL</span></div>
       <div class="ist-logo-sub">École Privée de Soutien Scolaire – Rue du poète Taghor, Sidi M'Hamed 16000</div>
-      <div style="display:flex;justify-content:center;align-items:center;margin-top:5px;">
+      <div style="display:flex;justify-content:center;align-items:center;margin-top:3px;">
         <div class="ist-title">${c.istTitle || "إِسْتِمَارَةُ تَسْجِيل"}</div>
       </div>
-      <div style="font-size:11px;color:#888;font-family:'Poppins',sans-serif;margin-top:2px">${c.istSubtitle || "Registration Form"}</div>
-      <div style="font-size:10px;color:#666;font-family:'Poppins',sans-serif;margin-top:3px;">Date: ${todayStr}</div>
+      <div style="font-size:10px;color:#888;font-family:'Poppins',sans-serif;margin-top:1px">${c.istSubtitle || "Registration Form"}</div>
+      <div style="font-size:9px;color:#666;font-family:'Poppins',sans-serif;margin-top:2px;">Date: ${todayStr}</div>
     </div>
 
     <div class="ist-section-title">${c.istSectionInfo || "المعلومات الشخصية"}</div>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:10px;">
+    <div class="ist-info-grid">
       <div>
         <div class="ist-field"><span class="ist-value">${d.prenom}</span></div>
         <div class="ist-label">${c.istFirstLabel || "الاسم"}</div>
@@ -474,7 +806,7 @@ function generateIstimara() {
       </div>
     </div>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:10px;">
+    <div class="ist-info-grid">
       <div>
         <div class="ist-field"><span class="ist-value">${formatDOB(d.dob)}</span></div>
         <div class="ist-label">${c.istDobLabel || "تاريخ الميلاد"}</div>
@@ -485,7 +817,7 @@ function generateIstimara() {
       </div>
     </div>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:10px;">
+    <div class="ist-info-grid">
       <div>
         <div class="ist-field"><span class="ist-value">${d.tel}</span></div>
         <div class="ist-label">${c.istTelLabel || "رقم الهاتف"}</div>
@@ -520,7 +852,7 @@ function generateIstimara() {
       <div class="ist-sig-box">
         <div class="ist-sig-label">${c.istSigStudent || "توقيع الطالب"}</div>
         <div class="ist-sig-line"></div>
-        <div style="font-size:10.5px;color:#888;display:flex;justify-content:space-between;padding:0 10px;">
+        <div style="font-size:8px;color:#888;display:flex;justify-content:space-between;padding:0 8px;">
           <span>${c.istSigDate || "التاريخ:"}</span>
           <span>${todayStr}</span>
         </div>
@@ -528,7 +860,7 @@ function generateIstimara() {
       <div class="ist-sig-box">
         <div class="ist-sig-label">${c.istSigDir || "توقيع و ختم مدير المدرسة"}</div>
         <div class="ist-sig-line"></div>
-        <div style="font-size:10px;color:#bbb;padding:4px;">${c.istSigStamp || "توقيع / ختم"}</div>
+        <div style="font-size:8px;color:#bbb;padding:2px;">${c.istSigStamp || "توقيع / ختم"}</div>
       </div>
     </div>
     
@@ -536,7 +868,11 @@ function generateIstimara() {
   `;
 
   const previewDoc = document.getElementById("istimara-doc");
-  if (previewDoc) previewDoc.innerHTML = html;
+  if (previewDoc) {
+    previewDoc.setAttribute("lang", currentLang);
+    previewDoc.setAttribute("dir", currentLang === "ar" ? "rtl" : "ltr");
+    previewDoc.innerHTML = html;
+  }
   
   const empty = document.getElementById("preview-empty");
   if (empty) empty.style.display = "none";
@@ -560,7 +896,7 @@ function printIstimara() {
   const direction = lang === "ar" ? "rtl" : "ltr";
   const align = lang === "ar" ? "right" : "left";
   
-  const w = window.open("", "_blank", "width=820,height=950");
+  const w = window.open("", "_blank", "width=900,height=1000");
   if (!w) {
     alert("Please allow pop-ups to print the document.");
     return;
@@ -572,46 +908,342 @@ function printIstimara() {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Istimara - Ziane School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"/>
     <style>
-      :root{--navy:#292983;--orange:#EE6326;--blue:#1C60B2;--gold:#F3AE16;--light:#f5f6fa;--gray:#6b7280}
-      *{margin:0;padding:0;box-sizing:border-box}
-      body{font-family:'Amiri',serif;direction:${direction};text-align:${align};margin:20px 30px;font-size:13.5px;color:#111;background:#fff}
-      .ist-header{text-align:center;border-bottom:2.5px solid var(--navy);padding-bottom:14px;margin-bottom:18px;position:relative}
-      .ist-logo-text{font-size:20px;font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif}
-      .ist-logo-text span{color:var(--orange)}
-      .ist-logo-sub{font-size:10px;color:var(--gray);letter-spacing:1.5px;font-family:'Poppins',sans-serif}
-      .ist-title{font-size:23px;font-weight:700;color:var(--navy)}
-      .ist-photo-box{position:absolute;top:4px;left:4px;width:72px;height:82px;border:1px solid #ccc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#bbb;text-align:center;font-family:'Poppins',sans-serif;line-height:1.4}
-      html[dir="rtl"] .ist-photo-box{left:auto;right:4px;}
-      .ist-section-title{font-size:13px;font-weight:700;color:var(--navy);border-right:4px solid var(--orange);padding-right:10px;margin:13px 0 9px;font-family:'Poppins',sans-serif;text-align:${align}}
-      html[dir="rtl"] .ist-section-title{border-right:none;border-left:4px solid var(--orange);padding-right:0;padding-left:10px;}
-      .ist-row{display:flex;justify-content:space-between;gap:20px;margin-bottom:10px;align-items:flex-end}
-      html[dir="rtl"] .ist-row{flex-direction:row-reverse;}
-      .ist-field{flex:1;border-bottom:1px solid #bbb;padding-bottom:3px;min-height:20px}
-      .ist-label{font-size:11px;color:var(--gray);margin-top:3px;text-align:${align}}
-      .ist-value{color:var(--blue);font-weight:700;text-align:${align}}
-      .ist-subj-row{display:flex;justify-content:flex-end;gap:22px;flex-wrap:wrap;margin:8px 0 12px}
-      .ist-subj-item{display:flex;align-items:center;gap:6px;font-size:13px}
-      .ist-checkbox{width:13px;height:13px;border:1.5px solid #666;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-size:9px}
-      .ist-checkbox.checked{background:var(--navy);border-color:var(--navy);color:#fff}
-      .ist-rules{background:var(--light);border-radius:7px;padding:10px 13px;margin:8px 0}
-      .ist-rule{font-size:11.5px;color:#444;margin-bottom:4px;line-height:1.65;text-align:${align}}
-      .ist-agreement{font-size:11.5px;color:#444;line-height:1.85;margin:9px 0;text-align:${align}}
-      .ist-sigs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:13px}
-      .ist-sig-box{border:1px solid #ccc;border-radius:7px;padding:9px;text-align:center}
-      .ist-sig-label{font-size:11px;font-weight:700;color:var(--navy);margin-bottom:7px;font-family:'Poppins',sans-serif}
-      .ist-sig-line{border-bottom:1px solid #bbb;height:26px;margin-bottom:4px}
-      .ist-footer-note{text-align:center;margin-top:13px;font-size:9.5px;color:#bbb;font-family:'Poppins',sans-serif;border-top:1px dashed #ddd;padding-top:8px}
-      @media print {body{margin:10px 20px}.no-print{display:none !important}}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        background: #f0f0f0;
+      }
+      
+      body {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-family: 'Amiri', serif;
+        direction: ${direction};
+        text-align: ${align};
+      }
+      
+      .print-sheet {
+        width: 794px;
+        min-height: 1123px;
+        background: white;
+        padding: 42px 52px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        position: relative;
+        font-family: "Amiri", "Cairo", "Tahoma", "Arial", sans-serif;
+        color: #111;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      
+      .print-sheet {
+        --navy: #292983;
+        --orange: #ee6326;
+        --blue: #1c60b2;
+        --gold: #f3ae16;
+        --gray: #6b7280;
+      }
+      
+      .print-sheet .ist-header {
+        position: relative;
+        min-height: 96px;
+        margin-bottom: 16px;
+        padding: 0 86px 12px;
+        text-align: center;
+        border-bottom: 2.5px solid var(--navy);
+      }
+      
+      .print-sheet .ist-logo-text,
+      .print-sheet .ist-logo-sub,
+      .print-sheet .ist-photo-box,
+      .print-sheet .ist-footer-note {
+        font-family: "Poppins", "Arial", sans-serif;
+      }
+      
+      .print-sheet .ist-logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+      }
+      
+      .print-sheet .ist-logo-text span {
+        color: var(--orange);
+      }
+      
+      .print-sheet .ist-logo-sub {
+        max-width: 470px;
+        margin: 2px auto 0;
+        color: var(--gray);
+        font-size: 8px;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+      
+      .print-sheet .ist-title {
+        margin: 4px 0 2px;
+        color: var(--navy);
+        font-family: "Amiri", "Cairo", serif;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1.25;
+      }
+      
+      .print-sheet .ist-photo-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        background: #f8f8f8;
+        border: 1.5px solid #999;
+        border-radius: 7px;
+        font-size: 8px;
+        line-height: 1.35;
+        text-align: center;
+      }
+      
+      [dir="rtl"] .print-sheet .ist-photo-box {
+        left: auto;
+        right: 0;
+      }
+      
+      .print-sheet .ist-section-title {
+        margin: 12px 0 7px;
+        padding: 6px 10px;
+        color: var(--navy);
+        background: #f8f9ff;
+        border-right: 3px solid var(--orange);
+        border-radius: 5px;
+        font-family: "Amiri", "Cairo", serif;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.35;
+        text-align: inherit;
+      }
+      
+      [dir="rtl"] .print-sheet .ist-section-title {
+        border-right: 0;
+        border-left: 3px solid var(--orange);
+      }
+      
+      .print-sheet .ist-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 14px;
+        margin-bottom: 6px;
+      }
+      
+      .print-sheet .ist-field {
+        min-height: 24px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #bbb;
+      }
+      
+      .print-sheet .ist-label {
+        margin-top: 2px;
+        color: var(--gray);
+        font-size: 10px;
+        font-weight: 600;
+        text-align: inherit;
+      }
+      
+      .print-sheet .ist-value {
+        display: block;
+        color: var(--blue);
+        font-family: "Amiri", "Cairo", serif;
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 1.35;
+        text-align: inherit;
+        unicode-bidi: plaintext;
+      }
+      
+      .print-sheet .ist-subj-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px 16px;
+        margin: 7px 0 12px;
+        padding: 9px 12px;
+        background: #f8f9ff;
+        border-radius: 7px;
+      }
+      
+      [dir="rtl"] .print-sheet .ist-subj-row {
+        justify-content: flex-end;
+      }
+      
+      .print-sheet .ist-subj-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #222;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.4;
+        unicode-bidi: isolate;
+      }
+      
+      .print-sheet .ist-checkbox {
+        width: 13px;
+        height: 13px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 13px;
+        border: 1.5px solid #666;
+        border-radius: 3px;
+        font-size: 8px;
+        font-weight: 800;
+        line-height: 1;
+      }
+      
+      .print-sheet .ist-checkbox.checked {
+        color: #fff;
+        background: var(--navy);
+        border-color: var(--navy);
+      }
+      
+      .print-sheet .ist-rules {
+        margin: 17px 0;
+        padding: 9px 12px;
+        background: #f8f9ff;
+        border-left: 3px solid var(--gold);
+        border-radius: 7px;
+      }
+      
+      [dir="rtl"] .print-sheet .ist-rules {
+        border-left: 0;
+        border-right: 3px solid var(--gold);
+      }
+      
+      .print-sheet .ist-rule {
+        margin-bottom: 13px;
+        color: #333;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.55;
+        text-align: inherit;
+        unicode-bidi: plaintext;
+      }
+      
+      .print-sheet .ist-agreement {
+        margin: 17px 0;
+        padding: 9px 11px;
+        color: #333;
+        background: #fafafa;
+        border: 1px solid #e9e9e9;
+        border-radius: 7px;
+        font-size: 11px;
+        line-height: 1.65;
+        text-align: inherit;
+        unicode-bidi: plaintext;
+      }
+      
+      .print-sheet .ist-sigs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 55px;
+      }
+      
+      .print-sheet .ist-sig-box {
+        padding: 8px 10px;
+        text-align: center;
+        background: #fafafa;
+        border: 1.5px solid #ddd;
+        border-radius: 7px;
+      }
+      
+      .print-sheet .ist-sig-label {
+        margin-bottom: 15px;
+        color: var(--navy);
+        font-family: "Amiri", "Cairo", serif;
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+      
+      .print-sheet .ist-sig-line {
+        height: 22px;
+        margin-bottom: 4px;
+        border-bottom: 1.5px solid #bbb;
+      }
+      
+      .print-sheet .ist-footer-note {
+        margin-top: 80px;
+        padding-top: 8px;
+        color: #999;
+        border-top: 1px dashed #d7d7d7;
+        font-size: 8px;
+        line-height: 1.4;
+        text-align: center;
+      }
+      
+      @media print {
+        html, body {
+          background: white;
+          padding: 0;
+        }
+        
+        body {
+          display: block;
+          padding: 0;
+        }
+        
+        .print-sheet {
+          width: 100%;
+          min-height: 100vh;
+          box-shadow: none;
+          padding: 15mm;
+        }
+        
+        .no-print {
+          display: none !important;
+        }
+      }
+      
+      @media (max-width: 560px) {
+        .print-sheet {
+          width: 100%;
+          min-height: auto;
+          padding: 16px;
+        }
+        
+        .print-sheet .ist-info-grid,
+        .print-sheet .ist-sigs {
+          grid-template-columns: 1fr;
+        }
+        
+        .print-sheet .ist-header {
+          padding-right: 76px;
+          padding-left: 76px;
+        }
+      }
     </style>
   </head>
   <body>
-    ${content}
-    <div style="text-align:center;margin-top:20px;font-family:'Poppins',sans-serif;font-size:11px;color:#999;border-top:1px solid #eee;padding-top:10px" class="no-print">
-      <button onclick="window.print()" style="padding:10px 30px;background:#292983;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;font-family:'Poppins',sans-serif;margin:0 5px">🖨️ Print / طباعة</button>
-      <button onclick="window.close()" style="padding:10px 30px;background:#6b7280;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;font-family:'Poppins',sans-serif;margin:0 5px">✕ Close / إغلاق</button>
-      <p style="margin-top:8px;font-size:10px;color:#bbb">Tip: In the print dialog, choose "Save as PDF" to download as PDF.<br>نصيحة: في مربع حوار الطباعة، اختر "حفظ بصيغة PDF" لتحميل الملف.</p>
+    <div class="print-sheet">
+      ${content}
+    </div>
+    <div style="text-align:center;margin-top:15px;font-family:'Poppins',sans-serif;font-size:11px;color:#999;border-top:1px solid #eee;padding-top:8px;width:794px;" class="no-print">
+      <button onclick="window.print()" style="padding:8px 20px;border:none;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Poppins',sans-serif;margin:0 4px;background:#292983;color:#fff;">🖨️ Print / طباعة</button>
+      <button onclick="window.close()" style="padding:8px 20px;border:none;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Poppins',sans-serif;margin:0 4px;background:#6b7280;color:#fff;">✕ Close / إغلاق</button>
+      <p style="margin-top:6px;font-size:9px;color:#bbb">Tip: In the print dialog, choose "Save as PDF" to download as PDF.<br>نصيحة: في مربع حوار الطباعة، اختر "حفظ بصيغة PDF" لتحميل الملف.</p>
     </div>
   </body>
   </html>`);
@@ -621,10 +1253,15 @@ function printIstimara() {
 }
 
 /* ── DOWNLOAD PDF ── */
-function downloadPDF() {
+async function downloadPDF() {
   const content = document.getElementById("istimara-doc");
   if (!content || !content.innerHTML || content.innerHTML.trim() === '') {
     alert("Please generate the Istimara first.");
+    return;
+  }
+
+  if (typeof html2canvas === "undefined" || !window.jspdf?.jsPDF) {
+    alert("PDF libraries are still loading. Please try again in a moment.");
     return;
   }
 
@@ -632,83 +1269,375 @@ function downloadPDF() {
   const fullName = `${d.prenom}_${d.nom}`.replace(/\s+/g, "_") || "Istimara";
   const lang = currentLang === "ar" ? "ar" : "fr";
   const direction = lang === "ar" ? "rtl" : "ltr";
-  const align = lang === "ar" ? "right" : "left";
-
   const btn = document.getElementById('btn-pdf');
-  const originalText = btn.textContent;
-  btn.textContent = '⏳ Generating PDF...';
-  btn.disabled = true;
+  const originalText = btn?.textContent || "";
 
-  const container = document.createElement('div');
-  container.style.cssText = `
-    position: fixed;
-    left: -9999px;
-    top: 0;
-    width: 794px;
-    background: white;
-    padding: 30px 40px;
-    font-family: 'Amiri', serif;
-    direction: ${direction};
-    text-align: ${align};
-    font-size: 13.5px;
-    color: #111;
-    z-index: 99999;
-  `;
-  
-  const clone = content.cloneNode(true);
-  container.appendChild(clone);
-  document.body.appendChild(container);
-
-  if (typeof html2canvas === 'undefined') {
-    alert("html2canvas library is loading. Please try again.");
-    document.body.removeChild(container);
-    btn.textContent = originalText;
-    btn.disabled = false;
-    return;
+  if (btn) {
+    btn.textContent = currentLang === "ar" ? "جاري إنشاء PDF..." : "Generating PDF...";
+    btn.disabled = true;
   }
 
-  html2canvas(container, {
-    scale: 2,
-    useCORS: true,
-    logging: false,
-    backgroundColor: '#ffffff',
-    width: 794,
-    height: container.scrollHeight,
-    windowHeight: container.scrollHeight,
-  }).then(canvas => {
+  // Create a clean rendering container
+  const renderRoot = document.createElement("div");
+  renderRoot.className = "pdf-render-root";
+  renderRoot.setAttribute("lang", lang);
+  renderRoot.setAttribute("dir", direction);
+  renderRoot.style.cssText = `
+    position: fixed;
+    left: -10000px;
+    top: 0;
+    width: 794px;
+    background: #fff;
+    pointer-events: none;
+    z-index: -1;
+  `;
+
+  // Create the PDF page with all styles
+  const sheet = document.createElement("div");
+  sheet.className = "pdf-page";
+  sheet.setAttribute("lang", lang);
+  sheet.setAttribute("dir", direction);
+  sheet.style.cssText = `
+    width: 794px;
+    min-height: 1123px;
+    background: white;
+    padding: 42px 52px;
+    font-family: "Amiri", "Cairo", "Tahoma", "Arial", sans-serif;
+    color: #111;
+    font-size: 13px;
+    line-height: 1.55;
+    direction: ${direction};
+    text-align: ${direction === "rtl" ? "right" : "left"};
+  `;
+  sheet.innerHTML = content.innerHTML;
+
+  // Add styles
+  const style = document.createElement("style");
+  style.textContent = `
+    .pdf-page {
+      --navy: #292983;
+      --orange: #ee6326;
+      --blue: #1c60b2;
+      --gold: #f3ae16;
+      --gray: #6b7280;
+    }
+    
+    .pdf-page .ist-header {
+      position: relative;
+      min-height: 96px;
+      margin-bottom: 16px;
+      padding: 0 86px 12px;
+      text-align: center;
+      border-bottom: 2.5px solid var(--navy);
+    }
+    
+    .pdf-page .ist-logo-text,
+    .pdf-page .ist-logo-sub,
+    .pdf-page .ist-photo-box,
+    .pdf-page .ist-footer-note {
+      font-family: "Poppins", "Arial", sans-serif;
+    }
+    
+    .pdf-page .ist-logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    
+    .pdf-page .ist-logo-text span {
+      color: var(--orange);
+    }
+    
+    .pdf-page .ist-logo-sub {
+      max-width: 470px;
+      margin: 5px auto 0;
+      color: var(--gray);
+      font-size: 8px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    
+    .pdf-page .ist-title {
+      margin: 8px 0 2px;
+      color: var(--navy);
+      font-family: "Amiri", "Cairo", serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    
+    .pdf-page .ist-photo-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      background: #f8f8f8;
+      border: 1.5px solid #999;
+      border-radius: 7px;
+      font-size: 8px;
+      line-height: 1.35;
+      text-align: center;
+    }
+    
+    [dir="rtl"] .pdf-page .ist-photo-box {
+      right: 0;
+      left: auto;
+    }
+    
+    .pdf-page .ist-section-title {
+      margin: 12px 0 7px;
+      padding: 6px 10px;
+      color: var(--navy);
+      background: #f8f9ff;
+      border-right: 3px solid var(--orange);
+      border-radius: 5px;
+      font-family: "Amiri", "Cairo", serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: inherit;
+    }
+    
+    [dir="rtl"] .pdf-page .ist-section-title {
+      border-right: 0;
+      border-left: 3px solid var(--orange);
+    }
+    
+    .pdf-page .ist-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 14px;
+      margin-bottom: 6px;
+    }
+    
+    .pdf-page .ist-field {
+      min-height: 24px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #bbb;
+    }
+    
+    .pdf-page .ist-label {
+      margin-top: 2px;
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: 600;
+      text-align: inherit;
+    }
+    
+    .pdf-page .ist-value {
+      display: block;
+      color: var(--blue);
+      font-family: "Amiri", "Cairo", serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+    
+    .pdf-page .ist-subj-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px 16px;
+      margin: 7px 0 12px;
+      padding: 9px 12px;
+      background: #f8f9ff;
+      border-radius: 7px;
+    }
+    
+    [dir="rtl"] .pdf-page .ist-subj-row {
+      justify-content: flex-end;
+    }
+    
+    .pdf-page .ist-subj-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #222;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      unicode-bidi: isolate;
+    }
+    
+    .pdf-page .ist-checkbox {
+      width: 13px;
+      height: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 13px;
+      border: 1.5px solid #666;
+      border-radius: 3px;
+      font-size: 8px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    
+    .pdf-page .ist-checkbox.checked {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    
+    .pdf-page .ist-rules {
+      margin: 17px 0;
+      padding: 9px 12px;
+      background: #f8f9ff;
+      border-left: 3px solid var(--gold);
+      border-radius: 7px;
+    }
+    
+    [dir="rtl"] .pdf-page .ist-rules {
+      border-right: 3px solid var(--gold);
+      border-left: 0;
+    }
+    
+    .pdf-page .ist-rule {
+      margin-bottom: 3px;
+      color: #333;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.55;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+    
+    .pdf-page .ist-agreement {
+      margin: 17px 0;
+      padding: 9px 11px;
+      color: #333;
+      background: #fafafa;
+      border: 1px solid #e9e9e9;
+      border-radius: 7px;
+      font-size: 11px;
+      line-height: 1.65;
+      text-align: inherit;
+      unicode-bidi: plaintext;
+    }
+    
+    .pdf-page .ist-sigs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 55px;
+    }
+    
+    .pdf-page .ist-sig-box {
+      margin-top: 105px;
+      padding: 18px 20px;
+      text-align: center;
+      background: #fafafa;
+      border: 1.5px solid #ddd;
+      border-radius: 7px;
+    }
+    
+    .pdf-page .ist-sig-label {
+      margin-bottom: 15px;
+      color: var(--navy);
+      font-family: "Amiri", "Cairo", serif;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    
+    .pdf-page .ist-sig-line {
+      height: 22px;
+      margin-bottom: 4px;
+      border-bottom: 1.5px solid #999999;
+    }
+    
+    .pdf-page .ist-footer-note {
+      margin-top: 130px;
+      padding-top: 8px;
+      color: rgb(100, 100, 100)d3d;
+      border-top: 1px dashed #d7d7d7;
+      font-size: 8px;
+      line-height: 1.4;
+      text-align: center;
+    }
+  `;
+
+  renderRoot.appendChild(style);
+  renderRoot.appendChild(sheet);
+  document.body.appendChild(renderRoot);
+
+  try {
+    // Wait for fonts and rendering
+    await document.fonts.ready;
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    // Force all content to be visible
+    const allElements = sheet.querySelectorAll('*');
+    allElements.forEach(el => {
+      el.style.visibility = 'visible';
+      el.style.display = '';
+    });
+    
+    // Ensure the sheet is visible
+    sheet.style.visibility = 'visible';
+    sheet.style.display = 'block';
+    
+    // Render to canvas with better options
+    const canvas = await html2canvas(sheet, {
+      scale: 2.5,
+      useCORS: true,
+      logging: false,
+      backgroundColor: '#ffffff',
+      width: 794,
+      height: sheet.scrollHeight,
+      windowWidth: 794,
+      windowHeight: sheet.scrollHeight,
+      scrollX: 0,
+      scrollY: 0,
+      onclone: (clonedDoc, clonedElement) => {
+        // Ensure everything is visible in the clone
+        const all = clonedElement.querySelectorAll('*');
+        all.forEach(el => {
+          el.style.visibility = 'visible';
+          el.style.display = '';
+        });
+        clonedElement.style.visibility = 'visible';
+        clonedElement.style.display = 'block';
+      }
+    });
+    
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
     
-    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    const imgData = canvas.toDataURL('image/jpeg', 0.98);
     pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
     pdf.save(`${fullName}_Istimara_ZianeSchool.pdf`);
     
-    document.body.removeChild(container);
-    btn.textContent = originalText;
-    btn.disabled = false;
-  }).catch(error => {
+  } catch (error) {
     console.error("PDF generation error:", error);
-    document.body.removeChild(container);
-    btn.textContent = originalText;
-    btn.disabled = false;
-    
-    if (confirm("PDF generation failed. Would you like to try the Print method instead?")) {
-      printIstimara();
+    alert("PDF generation failed. Please try using the Print method instead.");
+    printIstimara();
+  } finally {
+    document.body.removeChild(renderRoot);
+    if (btn) {
+      btn.textContent = originalText;
+      btn.disabled = false;
     }
-  });
+  }
 }
 
 /* ── MOBILE MENU TOGGLE ── */
 function toggleMenu() {
-  console.log("toggleMenu called");
   const links = document.querySelector(".nav-links");
   const hamburger = document.querySelector(".hamburger");
   
   if (links) {
     links.classList.toggle("open");
-    console.log("Menu toggled:", links.classList.contains("open"));
   }
   
   if (hamburger) {
@@ -725,8 +1654,6 @@ function handleNavScroll() {
 
 /* ── INIT ── */
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM loaded");
-  
   // Language buttons
   document.querySelectorAll(".lang-btn").forEach(function(btn) {
     btn.addEventListener("click", function() {
@@ -734,17 +1661,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Hamburger - using both onclick and event listener
+  // Hamburger
   const hamburger = document.querySelector(".hamburger");
   if (hamburger) {
-    hamburger.removeEventListener("click", toggleMenu);
     hamburger.addEventListener("click", function(e) {
       e.stopPropagation();
       toggleMenu();
     });
-    console.log("Hamburger listener attached");
-  } else {
-    console.log("Hamburger not found");
   }
 
   // Close menu on link click
@@ -799,10 +1722,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.documentElement.setAttribute("lang", "fr");
   }
 });
-
-
-
-
 
 // Make sure all functions are globally accessible
 window.generateIstimara = generateIstimara;
