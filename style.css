@@ -178,7 +178,7 @@ nav {
 .mobile-group {
   display: none;
   align-items: center;
-  gap: 8px;
+  gap: 18px;
 }
 
 .mobile-cta {
@@ -218,7 +218,7 @@ nav {
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
   cursor: pointer;
   padding: 4px;
   background: transparent;
@@ -262,7 +262,7 @@ nav {
 
   .mobile-group {
     display: flex !important;
-    gap: 6px;
+    gap: 16px;
     margin-left: auto;
   }
 
@@ -2990,5 +2990,93 @@ footer {
 
   .no-print {
     display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── SMALL MOBILE (up to 480px) ── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero {
+    min-height: auto;
+    padding-top: 60px;
+    align-items: flex-start;
+  }
+  .hero-content {
+    width: 100%;
+    padding: 30px 4% 40px;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .hero-sub {
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .hero-badge {
+    font-size: 9px;
+    padding: 4px 10px;
+    max-width: 100%;
+    line-height: 1.4;
+    white-space: normal;
+    height: auto;
+  }
+  .hero-badge .dot {
+    width: 5px;
+    height: 5px;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-stats {
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 16px;
+  }
+  .stat:last-child {
+    border-bottom: none;
+  }
+  .stat-num {
+    font-size: 24px;
+  }
+  .stat-label {
+    font-size: 9px;
   }
 }
